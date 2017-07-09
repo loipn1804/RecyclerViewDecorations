@@ -1,8 +1,6 @@
-package phanloi.recyclerviewdecorations.adapter;
+package phanloi.recyclerviewdecorations.decoration;
 
-import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -17,15 +15,18 @@ import android.view.View;
 public class SpaceDividerItemDecoration extends RecyclerView.ItemDecoration {
 
     private final int mSpaceHeight;
+    private boolean mShowLastDivider;
 
-    public SpaceDividerItemDecoration(int spaceHeight) {
+    public SpaceDividerItemDecoration(int spaceHeight, boolean showLastDivider) {
         this.mSpaceHeight = spaceHeight;
+        mShowLastDivider = showLastDivider;
     }
 
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
                                RecyclerView.State state) {
-        if (parent.getChildAdapterPosition(view) != parent.getAdapter().getItemCount() - 1) {
+        boolean isLastItem = parent.getChildAdapterPosition(view) == parent.getAdapter().getItemCount() - 1;
+        if (!isLastItem || mShowLastDivider) {
             outRect.bottom = mSpaceHeight;
         }
     }

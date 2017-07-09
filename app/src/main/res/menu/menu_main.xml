@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="phanloi.menusample.MainActivity">
+    <item
+        android:id="@+id/action_space"
+        android:orderInCategory="100"
+        android:title="@string/item_space"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_simple"
+        android:orderInCategory="100"
+        android:title="@string/item_simple"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_draw_over"
+        android:orderInCategory="100"
+        android:title="@string/item_draw_over"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_padding"
+        android:orderInCategory="100"
+        android:title="@string/item_padding"
+        app:showAsAction="never"/>
+</menu>

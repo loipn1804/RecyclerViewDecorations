@@ -5,7 +5,8 @@
     <dimen name="textSizeHeader">24sp</dimen>
     <dimen name="textSize">16sp</dimen>
 
-    <dimen name="adsPadding">20dp</dimen>
+    <dimen name="dividerHeight">10dp</dimen>
 
-    <dimen name="divider">1dp</dimen>
+    <dimen name="dividerPaddingHeight">1dp</dimen>
+    <dimen name="dividerPadding">10dp</dimen>
 </resources>

@@ -13,20 +13,18 @@ import android.view.View;
  *
  * @author Lio <loipn@vng.com.vn>
  * @version 1.0
- * @since July 02, 2017
+ * @since July 01, 2017
  */
 
-public class PaddingDividerItemDecoration extends RecyclerView.ItemDecoration {
+public class SimpleDividerItemDecoration extends RecyclerView.ItemDecoration {
 
     private Drawable mDivider;
     private int mDividerHeight;
-    private int mPadding;
     private boolean mShowLastDivider;
 
-    public PaddingDividerItemDecoration(Context context, int resId, int dividerHeight, int padding, boolean showLastDivider) {
+    public SimpleDividerItemDecoration(Context context, int resId, int dividerHeight, boolean showLastDivider) {
         mDivider = ContextCompat.getDrawable(context, resId);
         mDividerHeight = dividerHeight;
-        mPadding = padding;
         mShowLastDivider = showLastDivider;
     }
 
@@ -41,8 +39,8 @@ public class PaddingDividerItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
-        int left = parent.getPaddingLeft() + mPadding;
-        int right = parent.getWidth() - parent.getPaddingRight() - mPadding;
+        int left = parent.getPaddingLeft();
+        int right = parent.getWidth() - parent.getPaddingRight();
 
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
